@@ -1,7 +1,7 @@
 import { Router, Request, Response } from "express";
 import multer from "multer";
 
-import { CreateCategoryController } from "./controllers/category/createCategoreController";
+import { CreateCategoryController } from "./controllers/category/createCategoryController";
 import { CreateProductController } from "./controllers/product/createProductController";
 
 import  uploadConfig  from "./config/multer";
