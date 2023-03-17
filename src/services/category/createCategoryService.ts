@@ -11,7 +11,7 @@ interface CategoryRequest {
             throw new Error("Nome não informado");
         }
 
-        //verificar sE A CATEGORIA ja está cadastrada
+        //verificar se a categoria ja está cadastrada
         const categoryAlreadyExists = await prismaClient.category.findFirst({
             where: {
                 name: name
