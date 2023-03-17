@@ -1,0 +1,71 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\Savio\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js init
+
+PATH: 
+  C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files\GitHub CLI\;C:\Users\Savio\AppData\Local\Microsoft\WindowsApps;C:\Users\Savio\AppData\Local\Programs\Microsoft VS Code\bin;C:\xampp\php;C:\Users\Savio\AppData\Roaming\npm
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  16.17.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: canceled
+      at Interface.<anonymous> (C:\Users\Savio\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:137150:13)
+      at Interface.emit (node:events:513:28)
+      at Interface._ttyWrite (node:readline:1085:16)
+      at ReadStream.onkeypress (node:readline:291:10)
+      at ReadStream.emit (node:events:513:28)
+      at emitKeys (node:internal/readline/utils:357:14)
+      at emitKeys.next (<anonymous>)
+      at ReadStream.onData (node:internal/readline/emitKeypressEvents:61:36)
+      at ReadStream.emit (node:events:513:28)
+      at addChunk (node:internal/streams/readable:315:12)
+
+npm manifest: 
+  {
+    "name": "api",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "engines": {
+      "node": "18"
+    },
+    "scripts": {
+      "dev": "tsx src/server.ts",
+      "build": "tsup src",
+      "start": "node dist/server.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+      "@mermaid-js/mermaid-cli": "^10.0.2",
+      "@types/multer": "^1.4.7",
+      "@types/node": "18.14.4",
+      "prisma": "4.11.0",
+      "prisma-erd-generator": "^1.2.5",
+      "ts-node-dev": "^2.0.0",
+      "tsup": "6.6.3",
+      "tsx": "3.12.3",
+      "typescript": "4.9.5"
+    },
+    "dependencies": {
+      "@prisma/client": "4.11.0",
+      "cors": "^2.8.5",
+      "express": "^4.18.2",
+      "fastify": "4.13.0",
+      "multer": "^1.4.5-lts.1",
+      "zod": "3.20.6"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
