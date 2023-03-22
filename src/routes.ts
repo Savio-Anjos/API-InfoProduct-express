@@ -1,6 +1,7 @@
 import { Router, Request, Response } from "express";
 
 import { CreateCategoryController } from "./controllers/category/createCategoryController";
+import { ListCategoryController } from "./controllers/ListCategoryController";
 import { CreateProductController } from "./controllers/product/createProductController";
 
 
@@ -15,6 +16,7 @@ router.get("/", (req: Request, res: Response) => {
 
 // Rotas category
 router.post('/category', new CreateCategoryController().handle)
+router.get('/category', new ListCategoryController().handle)
 
 
 // Rotas product
