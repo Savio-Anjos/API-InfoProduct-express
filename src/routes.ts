@@ -7,6 +7,7 @@ import { ListCategoryController } from "./controllers/category/ListCategoryContr
 
 //Product
 import { CreateProductController } from "./controllers/product/createProductController";
+import { ListProductController } from "./controllers/product/ListProductController";
 
 
 const router = Router();
@@ -23,8 +24,9 @@ router.post('/category', new CreateCategoryController().handle);
 router.get('/category', new ListCategoryController().handle);
 router.delete('/category', new DeleteCategoryController().handle);
 
-
+ 
 // Rotas product
-router.post('/product', new CreateProductController().handle)
+router.post('/product', new CreateProductController().handle);
+router.get('/product', new ListProductController().handle);
 
 export { router };
