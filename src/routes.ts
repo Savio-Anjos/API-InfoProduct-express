@@ -1,7 +1,11 @@
 import { Router, Request, Response } from "express";
 
+//Category
 import { CreateCategoryController } from "./controllers/category/createCategoryController";
-import { ListCategoryController } from "./controllers/ListCategoryController";
+import { DeleteCategoryController } from "./controllers/category/DeleteCategoryController";
+import { ListCategoryController } from "./controllers/category/ListCategoryController";
+
+//Product
 import { CreateProductController } from "./controllers/product/createProductController";
 
 
@@ -15,8 +19,9 @@ router.get("/", (req: Request, res: Response) => {
 
 
 // Rotas category
-router.post('/category', new CreateCategoryController().handle)
-router.get('/category', new ListCategoryController().handle)
+router.post('/category', new CreateCategoryController().handle);
+router.get('/category', new ListCategoryController().handle);
+router.delete('/category', new DeleteCategoryController().handle);
 
 
 // Rotas product
