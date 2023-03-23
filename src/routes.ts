@@ -4,11 +4,14 @@ import { Router, Request, Response } from "express";
 import { CreateCategoryController } from "./controllers/category/createCategoryController";
 import { DeleteCategoryController } from "./controllers/category/DeleteCategoryController";
 import { ListCategoryController } from "./controllers/category/ListCategoryController";
-import { DeleteProductController } from "./controllers/DeleteProductController";
 
 //Product
-import { CreateProductController } from "./controllers/product/createProductController";
+import { CreateProductController } from "./controllers/product/CreateProductController";
 import { ListProductController } from "./controllers/product/ListProductController";
+import { DeleteProductController } from "./controllers/DeleteProductController";
+
+//Order
+ import { CreateOrderController } from "./controllers/order/CreateOrderController";
 
 
 const router = Router();
@@ -30,5 +33,9 @@ router.delete('/category', new DeleteCategoryController().handle);
 router.post('/product', new CreateProductController().handle);
 router.get('/product', new ListProductController().handle);
 router.delete('/product', new DeleteProductController().handle);
+
+
+// Rotas order
+router.post('/order', new CreateOrderController().handle);
 
 export { router };
