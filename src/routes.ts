@@ -8,12 +8,17 @@ import { ListCategoryController } from "./controllers/category/ListCategoryContr
 //Product
 import { CreateProductController } from "./controllers/product/CreateProductController";
 import { ListProductController } from "./controllers/product/ListProductController";
-import { DeleteProductController } from "./controllers/DeleteProductController";
+import { DeleteProductController } from "./controllers/product/DeleteProductController";
 
 //Order
  import { CreateOrderController } from "./controllers/order/CreateOrderController";
  import { ListOrderController } from "./controllers/order/ListOrderController";
  import { DeleteOrderController } from "./controllers/order/DeleteOrderController";
+
+ //Item
+ import { CreateItemController } from "./controllers/item/CreateItemController";
+ //import { ListItemController } from "./controllers/item/ListItemController";
+ //import { DeleteItemController } from "./controllers/item/DeleteItemController
 
 
 
@@ -42,5 +47,8 @@ router.delete('/product', new DeleteProductController().handle);
 router.post('/order', new CreateOrderController().handle);
 router.get('/order', new ListOrderController().handle);
 router.delete('/order', new DeleteOrderController().handle);
+
+// Rotas item
+router.post('/item', new CreateItemController().handle);
 
 export { router };
