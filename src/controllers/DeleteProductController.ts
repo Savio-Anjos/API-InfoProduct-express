@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { DeleteProductService } from "../services/DeleteProductService";
+import { DeleteProductService } from "../services/product/DeleteProductService";
 
 
 class DeleteProductController { 

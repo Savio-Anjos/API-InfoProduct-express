@@ -12,7 +12,9 @@ import { DeleteProductController } from "./controllers/DeleteProductController";
 
 //Order
  import { CreateOrderController } from "./controllers/order/CreateOrderController";
+ import { ListOrderController } from "./controllers/order/ListOrderController";
  import { DeleteOrderController } from "./controllers/order/DeleteOrderController";
+
 
 
 const router = Router();
@@ -38,6 +40,7 @@ router.delete('/product', new DeleteProductController().handle);
 
 // Rotas order
 router.post('/order', new CreateOrderController().handle);
+router.get('/order', new ListOrderController().handle);
 router.delete('/order', new DeleteOrderController().handle);
 
 export { router };
