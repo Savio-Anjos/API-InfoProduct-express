@@ -17,7 +17,7 @@ import { DeleteProductController } from "./controllers/product/DeleteProductCont
 
  //Item
  import { CreateItemController } from "./controllers/item/CreateItemController";
- //import { ListItemController } from "./controllers/item/ListItemController";
+ import { ListItensController } from "./controllers/item/ListItensController";
  //import { DeleteItemController } from "./controllers/item/DeleteItemController
 
 
@@ -50,5 +50,6 @@ router.delete('/order', new DeleteOrderController().handle);
 
 // Rotas item
 router.post('/item', new CreateItemController().handle);
+router.get('/item', new ListItensController().handle);
 
 export { router };
